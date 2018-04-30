@@ -1,4 +1,4 @@
-FROM prom/prometheus:master
+FROM prom/prometheus:v2.0.0-rc.3
 
 ENV \
     ARG_COMMAND=/bin/prometheus \
