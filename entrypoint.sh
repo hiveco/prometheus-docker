@@ -6,6 +6,7 @@ args="$(env | grep "^$ARG_PREFIX" | awk -F= -v prefix=$ARG_PREFIX \
 	arg=$1;
 	value=$2;
 	sub(prefix, "", arg);
+	gsub("__", "-", arg);
 	gsub("_", ".", arg);
 	arg=tolower(arg);
 	print "--"arg"="value
